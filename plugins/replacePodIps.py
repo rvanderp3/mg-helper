@@ -31,7 +31,7 @@ class updateFileThread (threading.Thread):
             with open(filename) as file:
                 s = file.read()
             for key in self.ipMap:                
-                s = s.replace(key+":", self.ipMap[key])
+                s = s.replace(key+":", self.ipMap[key]+":")
             with open(filename, "w") as file:
                 file.write(s)
     
